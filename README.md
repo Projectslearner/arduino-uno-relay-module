@@ -1,69 +1,58 @@
-# Motion-Activated Relay Control with Arduino
+# Arduino Uno Relay Module with Serial Monitor Output
 
-## Description
+#### Project Overview
 
-This project demonstrates how to use an Arduino to control a relay based on input from a PIR (Passive Infrared) motion sensor. The system turns on the relay when motion is detected and keeps it on for a specified debounce delay period before turning it off.
+This project demonstrates how to control a relay module using an Arduino Uno and monitor its status using the Serial Monitor. A relay is an electrically operated switch that allows you to control high-power devices with a low-power signal.
 
-## Components Needed
+#### Components Needed
 
-1. **Arduino UNO**
-2. **Relay Module**
-3. **PIR Motion Sensor**
-4. **Breadboard**
-5. **Jumper Wires**
+- **Arduino Uno**
+- **Relay Module**
+- **Jumper Wires**
+- **Breadboard**
 
-## Instructions
+#### Block diagram
 
-### Connecting the Components
 
-1. **Relay Module to Arduino:**
-   - Connect the relay pin to digital pin 8 on the Arduino.
-   - Connect the VCC and GND of the relay to 5V and GND on the Arduino.
+#### Circuit Setup
 
-2. **PIR Motion Sensor to Arduino:**
-   - Connect the output pin of the PIR sensor to digital pin 2 on the Arduino.
-   - Connect the VCC and GND of the PIR sensor to 5V and GND on the Arduino.
+1. **Connect Relay Module to Arduino Uno:**
+   - Connect the signal input of the relay module to digital pin 7 on the Arduino.
+   - Connect the VCC and GND of the relay module to the 5V and GND of the Arduino, respectively.
 
-### Upload the Code and Observe the Data
+#### Instructions
 
-1. **Load the Program:**
-   - Open the Arduino IDE and paste the provided code.
-   - Select the correct board and port in the Arduino IDE.
-   - Upload the program to the Arduino.
+1. **Circuit Setup:**
+   - Wire up the relay module to the Arduino Uno as per the circuit setup section.
 
-2. **Monitor the Output:**
-   - Open the Serial Monitor in the Arduino IDE to observe the status messages.
-   - The relay will turn on when motion is detected and turn off after the debounce delay.
+2. **Code Upload:**
+   - Open the Arduino IDE and create a new sketch.
+   - Copy and paste the provided Arduino code into the sketch.
 
-## Project Operation
+3. **Testing:**
+   - Upload the code to the Arduino Uno.
+   - Open the serial monitor with a baud rate of 9600.
+   - Observe the messages indicating the state of the relay (ON or OFF).
 
-- **Initialization:**
-  - The relay is initialized to the off state (HIGH).
-  - The PIR sensor is set as an input.
+#### Applications
 
-- **Motion Detection:**
-  - An interrupt is attached to the PIR sensor to detect motion.
-  - When motion is detected, the relay is turned on, and a timer starts.
-  - The relay turns off after the specified debounce delay if no further motion is detected.
+- **Home Automation:** Control lights, fans, or other appliances remotely.
+- **Industrial Control:** Interface with high-power devices using Arduino.
+- **Experimentation:** Learn about relay operation and control in circuits.
 
-- **Serial Output:**
-  - The Serial Monitor displays "Motion detected", "ON", and "OFF" messages to indicate the relay status.
+#### Notes
 
-## Applications
-
-1. **Security Systems:** Automated lighting or alarms triggered by motion.
-2. **Home Automation:** Energy-saving systems that turn on devices only when motion is detected.
-3. **DIY Projects:** Interactive projects requiring motion detection and control mechanisms.
+- Ensure the relay module is rated appropriately for the devices you intend to control.
+- Check the datasheet of your relay module for correct wiring and operational limits.
+- Use external power sources or relays with optocouplers for higher reliability and isolation.
 
 ---
 
-### Whether you're working on electronics projects, IoT applications, or robotics innovations, Projects Learner is your go-to platform for guidance and expertise.
-
-🌐 [projectslearner.com](https://www.projectslearner.com)  
+🌐 [ProjectsLearner](https://projectslearner.com/learn/arduino-uno-relay-module)  
 📧 [projectslearner@gmail.com](mailto:projectslearner@gmail.com)  
 📸 [Instagram](https://www.instagram.com/projectslearner/)  
 📘 [Facebook](https://www.facebook.com/projectslearner)  
 ▶️ [YouTube](https://www.youtube.com/@ProjectsLearner)  
-📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)  
+📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)
 
-## Made for you with ❣️ from ProjectsLearner
+Crafted with ❤️ by ProjectsLearner
